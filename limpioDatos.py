@@ -7,6 +7,9 @@ from collections import defaultdict
 import pyodbc
 from sqlalchemy import create_engine
 
+# Configuración de conexión
+server = 'localhost'
+database = 'PROYECTO'  # Corregí el typo en el nombre
 
 fk = Faker()
 
@@ -934,9 +937,7 @@ print(f"- Detalles Orden: {len(df_detalleOrdenServicio)}")
 print(f"- Reparación Material: {len(df_reparacionMat)}")
 
 
-# Configuración de conexión
-server = 'localhost'
-database = 'PROYECTO'  # Corregí el typo en el nombre
+
 
 # Conexión con pyodbc
 conn = pyodbc.connect(
